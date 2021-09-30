@@ -33,6 +33,8 @@ class DispositivoEletronico {
 
 
 //criando classe derivada da principal//herda tudo da class DispositivoEletronico
+
+//irma
 class Smartphone extends DispositivoEletronico{
     constructor(nome, cor, modelo) {
         //SUPER serve para chamar os item dentro do constructor PAI(DispositivoEletronico)
@@ -46,6 +48,8 @@ class Smartphone extends DispositivoEletronico{
 const s1 = new Smartphone ('Samsung', 'Preto', 'Galaxy S10')
 console.log(s1);
 
+
+//irma
 class Tablet extends DispositivoEletronico{
     constructor (nome, temWifi){
         super(nome),
