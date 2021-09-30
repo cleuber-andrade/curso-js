@@ -31,7 +31,7 @@ function criaPessoa(nome, sobrenome){
 }
 
 const p1 = criaPessoa('Cleuber', 'Andrade');
-const p2 = criaPessoa('Nathy', 'Andrade');
+const p2 = criaPessoa('Nathy', 'A.');
 
 console.log(p2);
 
