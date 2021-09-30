@@ -15,7 +15,7 @@ const comer = {
 
 const beber = {
     beber() {
-        console.log(`${this.nome} está comendo`);
+        console.log(`${this.nome} está bebendo`);
     },
 };
 
