@@ -14,10 +14,26 @@
             <ul>
                 <li>Nenhum campo pode estar vazio</li>
                 <li>Usuário só poderá conter letras e/ou números</li>
-                <li></li>
-                <li></li>
+                <li>Usuário deverá ter entre 3 e 12 caracteres</li>
+                <li>Nenhum campo pode está vazio</li>
             </ul>
         </h1>
+
+        <form action="/" method="post" class="formulario">
+            <label for="">Nome</label>
+            <input type="text" class="nome validar">
+            <label for="">Sobrenome</label>
+            <input type="text" class="sobrenome validar">
+            <label for="">CPF</label>
+            <input type="text" class="cpf validar">
+            <label for="">Usuário</label>
+            <input type="text" class="usuario validar">
+            <label for="">Senhe</label>
+            <input type="password" class="senha validar">
+            <label for="">Repetir Senha</label>
+            <input type="password" class="repetir validar">
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
     <script src="assets/js/validando_form.js"></script>
