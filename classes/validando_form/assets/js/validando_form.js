@@ -12,20 +12,53 @@ class ValidaFormulário{
     }
 
     handleSubmit(e){
-        e.preventDefult();
+        e.preventDefault();
         const camposValidos = this.camposSaoValidos();        
     }
 
     camposSaoValidos(){
         let valid = true;
 
+        for (let erroText of this.formulario.querySelectorAll('.erro-text')){
+            erroText.remove();
+        }
+
         for(let campo of this.formulario.querySelectorAll('.validar')){
+
             const label = campo.previousElementSibling.innerText;
+
             if(!campo.value){
                 this.criaErro(campo, `Campo ${label} não pode estar em branco.`);
                 valid = false;
             }
+
+            if(campo.classList.contains('cpf')){
+                if(!this.validaCPF(campo)) valid = false;
+            }
+
+            if(campo.classList.contains('usuario')){
+                if(!this.validaUsuario(campo)) valid = false;
+            }
         };
+    }
+
+    validaUsuario(campo){
+        const usuario = campo.value;
+        let valid = true;
+        if(usuario.length < 3 || usuario.length > 12){
+            this.criaErro(campo, 'Usuário precisa ter entre 3 e 12 caractéres');
+            valid = false;
+        } 
+        return valid;
+    }
+
+    validaCPF(campo){
+        const cpf = new ValidaCPF(campo.value);
+
+        if (!cpf.valida()){
+            this.criaErro(campo, 'CPF Inválido.');
+            return false;
+        }
     }
 
     criaErro(campo, msg){
