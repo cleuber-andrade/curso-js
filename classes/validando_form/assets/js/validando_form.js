@@ -45,7 +45,7 @@ class ValidaFormulário{
     camposSaoValidos(){
         let valid = true;
 
-        for (let erroText of this.formulario.querySelectorAll('.error-text')){
+        for (let errorText of this.formulario.querySelectorAll('.error-text')){
             errorText.remove();
         }
 
