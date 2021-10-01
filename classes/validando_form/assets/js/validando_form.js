@@ -39,17 +39,14 @@ class ValidaFormulário{
             this.criaErro(senha, 'Senha precisa estar entre 6 e 12 caracteres.');
             
         }
-
-
-
         return valid;
     }
 
     camposSaoValidos(){
         let valid = true;
 
-        for (let erroText of this.formulario.querySelectorAll('.erro-text')){
-            erroText.remove();
+        for (let erroText of this.formulario.querySelectorAll('.error-text')){
+            errorText.remove();
         }
 
         for(let campo of this.formulario.querySelectorAll('.validar')){
@@ -97,6 +94,8 @@ class ValidaFormulário{
             this.criaErro(campo, 'CPF Inválido.');
             return false;
         }
+
+        return true;
     }
 
     criaErro(campo, msg){
