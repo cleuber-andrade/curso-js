@@ -13,7 +13,36 @@ class ValidaFormulário{
 
     handleSubmit(e){
         e.preventDefault();
-        const camposValidos = this.camposSaoValidos();        
+        const camposValidos = this.camposSaoValidos(); 
+        const senhasValidas = this.senhasSaoValidas(); 
+        
+        if (camposValidos && senhasValidas){
+            alert('Formulário Enviado.');
+            this.formulario.submit();
+        }
+    }
+
+    senhasSaoValidas(){
+        let valid = true;
+        
+        const senha = this.formulario.querySelector('.senha');
+        const repetir = this.formulario.querySelector('.repetir');
+
+        if(senha.value !== repetir.value){
+            valid = false;
+            this.criaErro(senha, 'Campos senha e repetir senha precisam ser iguais');
+            this.criaErro(repetir, 'Campos senha e repetir senha precisam ser iguais');
+        }
+
+        if(senha.value.length < 6 || senha.value.length > 12){
+            valid = false;
+            this.criaErro(senha, 'Senha precisa estar entre 6 e 12 caracteres.');
+            
+        }
+
+
+
+        return valid;
     }
 
     camposSaoValidos(){
@@ -40,15 +69,24 @@ class ValidaFormulário{
                 if(!this.validaUsuario(campo)) valid = false;
             }
         };
+
+        return valid;
     }
 
     validaUsuario(campo){
         const usuario = campo.value;
         let valid = true;
+
         if(usuario.length < 3 || usuario.length > 12){
             this.criaErro(campo, 'Usuário precisa ter entre 3 e 12 caractéres');
             valid = false;
         } 
+
+        if(!usuario.match(/^[a-zA-Z0-9]+$/g)){
+            this.criaErro(campo, 'Nome de usuário precisa ter conter apenas letras e números.');
+            valid = false;
+        } 
+
         return valid;
     }
 
