@@ -1,6 +1,6 @@
 //async e await é basicamente a mesma coisa que THEN E CATCH nas promisses, mas de forma mais limpa e inclusive é o recomendado.
 
-function rand(min, max){
+function rand(min = 0, max = 3){
     min *= 1000;
     max *= 1000;
     return Math.floor(Math.random() * (max - min) + min);
@@ -20,4 +20,5 @@ function esperaAi(msg, tempo){
     });
 }
 
-esperaAi('Fase 1', rand(0, 3));
+esperaAi('Fase 1', rand());
+
