@@ -34,8 +34,13 @@ async function carregaPagina(el){
         url: href        
     };
 
-    const response = await request(objConfig);
-    carregaResultado(response);
+    try{
+        const response = await request(objConfig);
+        carregaResultado(response);
+    } catch (e) {
+        console.log(e);
+    }
+    
 }
 
 function carregaResultado(response){
