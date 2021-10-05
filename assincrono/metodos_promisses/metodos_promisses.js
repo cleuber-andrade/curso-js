@@ -50,7 +50,7 @@ Promise.race(promises)
     });
 
 
-//Promisse.resolve -     
+//Promisse.resolve - Promisse.reject - ou já te entrega a promisse resolvida ou rejeitada, logo de cara. 
 
 function baixaPagina(){
     const emCache = true;
@@ -66,4 +66,4 @@ baixaPagina()
     .then(dadosPaginas => {
         console.log(dadosPaginas);
     })
-    .catch(e => console.log(e));
+    .catch(e => console.log('ERROR', e));     
