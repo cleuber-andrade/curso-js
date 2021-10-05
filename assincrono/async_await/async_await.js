@@ -39,3 +39,9 @@ async function executa(){
 }
 
 executa();
+
+
+//Promise possui 3 estados 
+//Pendente -> pending
+//fullfilled -> resolvida
+//rejected -> rejeitada
