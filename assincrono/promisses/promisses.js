@@ -9,7 +9,9 @@ function rand(min, max){
 //resolve é basicamente, esse código executou com sucesso, resolve ele para mim.
 //reject é basicamente, esse código executou com erro, rejeita ele para mim.
 function esperaAi(msg, tempo){
+    //tem que chamar o construtor da Promisse com os parametros resolve e reject.
     return new Promise((resolve, reject) => {
+        if(typeof msg !== 'string') reject(new Error('ERRO'));
         setTimeout(() =>{            
             resolve(msg);
         }, tempo);
@@ -27,8 +29,8 @@ esperaAi('Conexão com BD', rand(1, 3))
         return esperaAi('Buscando dados da Base', rand(1, 3));
     })
     .then(resposta => {
-        console.log(resposta);
-        return esperaAi('Tratando os dados da Base', rand(1,3));
+        console.log(resposta);                //exemplo de erro
+        return esperaAi('Tratando os dados da Base'/*3*/, rand(1,3));
     })
     .then(resposta => {
         console.log(resposta);
@@ -36,7 +38,9 @@ esperaAi('Conexão com BD', rand(1, 3))
     .then(() => {
         console.log('Exibe dados na tela');
     })
-    .catch();
+    .catch(e => {
+        console.log('ERRO', e);
+    });
 
 
 console.log('Isso aqui será exibido antes de qualquer promisse');
