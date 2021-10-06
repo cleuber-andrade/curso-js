@@ -23,7 +23,7 @@ console.log(pessoas['endereco']);
 //}
 
 
-//**O for in ele lê os indices ou chaves do obejto
+//**O for in ele lê os indices ou chaves do objeto
 
 
 //utilizando em arrays
