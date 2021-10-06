@@ -29,7 +29,7 @@ let num1 = 9.54579;
 //let raiz = 9;
 //quadrada =  Math.sqrt(raiz);
 
-//**metodo Math.sqrt calcula a raiz cubica de um numero;
+//**metodo Math.cbrt calcula a raiz cubica de um numero;
 //cubica = Math.cbrt(raiz);
 
 //console.log(quadrada, cubica);
