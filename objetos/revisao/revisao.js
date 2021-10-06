@@ -3,7 +3,7 @@ const pessoa = {
     nome: 'Cleuber',
     sobrenome: 'Andrade',    
 };
-//anitação de ponto
+//anotação de ponto
 console.log(pessoa.nome);
 
 //a anotação de colchetes é recomendada quando tem elementos dinânmicos
