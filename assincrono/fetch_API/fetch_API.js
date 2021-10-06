@@ -1,4 +1,7 @@
 //é o recomendado utilizar o Fetch Api ao invés do AJAX
+
+
+
 document.addEventListener('click', e =>{
     const el = e.target;
     const tag =  el.tagName.toLowerCase();
