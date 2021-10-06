@@ -1,6 +1,13 @@
-fetch('pessoas.json')
-    .then(resposta => resposta.json())
-    .then(json => carregaElementosNaPagina(json));
+//esse é o modelo padrão do fetch API
+//fetch('pessoas.json')
+//    .then(resposta => resposta.json())
+//    .then(json => carregaElementosNaPagina(json));
+
+
+//é recomenável utilizar o axios por conta de ser mais moderno e simplifica o código
+
+axios('pessoas.json')
+    .then(resposta => carregaElementosNaPagina(resposta.data));
 
 
 function carregaElementosNaPagina(json) {
@@ -10,7 +17,7 @@ function carregaElementosNaPagina(json) {
     //puxar os nomes que estão json
     for(let pessoa of json){
         const tr = document.createElement('tr');
-                
+
         let td = document.createElement('td');
         
         td = document.createElement('td');
@@ -32,5 +39,6 @@ function carregaElementosNaPagina(json) {
     const resultado = document.querySelector('.resultado');
     resultado.appendChild(table);
 }
+
 
 
