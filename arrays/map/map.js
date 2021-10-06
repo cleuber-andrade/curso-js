@@ -7,7 +7,7 @@
 const numeros = [1, 5, 12, 19, 27, 37, 41, 69, 33, 55, 21, 99, 70];
 
 const numerosEmDobro = numeros.map(valor => valor * 2);
-//console.log(numerosEmDobro);
+console.log(numerosEmDobro);
 
 
 
