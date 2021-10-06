@@ -16,7 +16,7 @@ for (let [chave, valor] of Object.entries(produto)){
 
 ---------------------------
 
-**Object.assign(destino, qualquer coisa) (serva para copiar um objetos para outro objeto)
+**Object.assign(destino, qualquer coisa) (serve para copiar um objetos para outro objeto)
 
 const produto = { nome: 'Produto', preco: 1.8};
 const caneca = Object.assign({}, produto, {material: 'porcelana'});

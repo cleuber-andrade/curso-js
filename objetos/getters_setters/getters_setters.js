@@ -1,5 +1,5 @@
 //GETTERS E SETTERS
-//seria fazer um metodo da função do obj simular que ele é ume propriedadde.
+//seria fazer um metodo da função do obj simular que ele é uma propriedadde.
 //seria uma maneira de proteger as propriedades
 //GETTERS - Obter o valor(só pega o valor e exibe o valor)
 //SETTER - Configura o valor()
