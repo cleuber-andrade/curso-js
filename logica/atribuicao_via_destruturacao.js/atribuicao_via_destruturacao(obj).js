@@ -14,7 +14,7 @@ const pessoa = {
 const { nome, sobrenome, idade } = pessoa; 
 console.log(nome, sobrenome, idade);
 
-//pode mundar o nome da variavel dentro do obj tbm exmplo:
+//pode mudar o nome da variavel dentro do obj tbm exmplo:
 //const { nome: teste = '', sobrenome, idade} = pessoa;
 //console.log(teste, sobrenome, idade);
 
@@ -32,7 +32,7 @@ console.log(nome, sobrenome, idade);
 
 //podemos tbm utilizamos o operador REST exemplo:
 //const { nome, ...rest} = pessoa;
-//console.log(nome , rest);
+//console.log(nome, rest);
 
 
 //jogando na variével dados do objeto na variavel.

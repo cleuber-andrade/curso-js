@@ -1,5 +1,5 @@
 
-//**Contunue e Break server para qualuer tipo de FOR e WHILE.(for in, for of, for classico, do while, while)
+//**Contunue e Break server para qualquer tipo de FOR e WHILE.(for in, for of, for classico, do while, while)
 //**É mais recomendável utilizar o FOR;
 
 
