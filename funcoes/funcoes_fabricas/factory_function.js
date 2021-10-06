@@ -24,7 +24,7 @@ function criaPessoa(nome, sobrenome, altura, peso){
 
         altura,
         peso,
-        //Getter faz com que o métido se transforme em atributo
+        //Getter faz com que o método se transforme em atributo
         get imc(){
             const indice = this.peso / (this.altura ** 2);
             return indice.toFixed(2);
