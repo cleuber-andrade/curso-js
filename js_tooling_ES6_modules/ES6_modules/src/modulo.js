@@ -1,9 +1,18 @@
-const nome = 'Cleuber';
-const sobrenome = 'Andrade';
-const idade = 34;
+const teste = 'Vc é um otário';
+export const nome = 'Cleuber';
+export const sobrenome = 'Andrade';
+export const idade = 34;
+//caso não queira exportar é só não colocar Export como no exemplo abaixo(varialvel provada)
+const cpf = 213456987;
 
-function soma(x, y){
+
+//se exportar junto com a palavra default, quando importar pode colocar qualquer nome.
+//lembrando que esse procedimento sópode ser realizado um unica vez
+//para chamar no import é necessário está sem as chaves{}
+export /*default*/ function soma(x, y){
     return x + y; 
 }
 
-export { nome };
+
+
+export { nome , sobrenome, idade, soma, teste as default };
