@@ -43,3 +43,5 @@ import defaultExport, { export [ , [...] ] } from "module-name";
 import defaultExport, * as name from "module-name";
 import "module-name"; var promise = import("module-name"); // This is a stage 3 proposal.
 */
+
+//para web para acompanhar em tempo real é npm rum dev(fica dentro do package.json)
