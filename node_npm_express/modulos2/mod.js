@@ -4,6 +4,7 @@
 
 //module.exports = (x, y) => x * y;
 
+/*
 module.exports = class Cachorro {
     constructor (nome){
         this.nome = nome;
@@ -13,3 +14,4 @@ module.exports = class Cachorro {
         console.log(`${this.nome} está fazendo au au`);
     }
 }
+*/
