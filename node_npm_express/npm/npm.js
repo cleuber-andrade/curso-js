@@ -65,3 +65,6 @@ mexendo nas versões
   //evitar utilizar essa terceira verão pq pode quebar o código por conta da compabilidade
   3.0.0
 */
+
+const teste = 'teste';
+console.log(teste);
