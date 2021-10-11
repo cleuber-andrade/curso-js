@@ -6,7 +6,11 @@
 
 //para instalar (pacotes, frameworks e etc)no npm - npm install express 
 
+//caso não queira que uma dependencia nunca seja atualizada basta colocar - npm install express -E;
 
+//para atualizar os pacotes - npm update
+
+//
 
 /*
 {
