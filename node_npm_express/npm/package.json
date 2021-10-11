@@ -10,8 +10,5 @@
   "author": "",
   "license": "ISC",
   "dependencies": {},
-  "devDependencies": {
-    "express": "^4.17.1",
-    "webpack": "^5.58.1"
-  }
+  "devDependencies": {}
 }

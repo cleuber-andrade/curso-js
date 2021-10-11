@@ -19,7 +19,7 @@
 
 //quando o projeto depender de um vesão específica (versões anterior ou superior) - //**npm install express@versão a ser escolhida
 
-//atulizar a dependias para a ultima versão - //**npm install express@4x
+//atulizar a dependias para a ultima versão - //**npm install express@4.
 
 //para desisntalar um pacote ou frameworks - //**npm uninstall express
 
