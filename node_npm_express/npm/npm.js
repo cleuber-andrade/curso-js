@@ -1,16 +1,23 @@
-//CD serva para acessar a parta a frente no terminal;
+//**CD serva para acessar a parta a frente no terminal;
 
-//iniciar o npm - npm init -y
+//iniciar o npm - //**npm init -y;
 
-// no package.json - "name": "npm" é literalmente o nome da pasta.
+//para instalar (pacotes, frameworks e etc)no npm - //**npm install express;
 
-//para instalar (pacotes, frameworks e etc)no npm - npm install express 
+//caso não queira que uma dependencia nunca seja atualizada basta colocar - //**npm install express -E;
 
-//caso não queira que uma dependencia nunca seja atualizada basta colocar - npm install express -E;
+//para atualizar os pacotes para ultima versao - //**npm update;
 
-//para atualizar os pacotes - npm update
+//movendo uma dependencia para devDependencies - //**npm install express --save-dev
 
-//
+//voltando só para as dependencies - //**npm install express --save-prod
+
+
+//quando o projeto depender de um vesão específica (versões anterior ou superior) - //**npm install express@versão a ser escolhida
+
+//atulizar a dependias para a ultima versão - //**npm install express@4x
+
+//para desisntalar um pacote ou frameworks - //**npm uninstall express
 
 /*
 {
@@ -24,8 +31,25 @@
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "dependencies": {  (as instalações ficam aqui em dependencies)
+    "dependencies": {  (as instalações ficam aqui em dependencies ou na devDependecies)
       "express": "^4.17.1"
-    }
+           
+    },
+    "devDependencies": {}
   }
 */ 
+
+/*
+mexendo nas versões
+
+  ^ - significa que podemos atualizar a minor e patch
+  ~ - configura só versão do patch
+
+  4.     .17     0
+  major  minor  pacth
+
+  2.1.1
+  2.2.0
+  //evitar utilizar essa terceira verão pq pode quebar o código por conta da compabilidade
+  3.0.0
+*/
