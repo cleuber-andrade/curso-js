@@ -58,7 +58,7 @@ mexendo nas versões
   ~ - configura só versão do patch
 
   4.     .17     0
-  major  minor  pacth
+  major  minor  patch
 
   2.1.1
   2.2.0
