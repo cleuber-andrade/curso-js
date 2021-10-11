@@ -2,6 +2,8 @@
 
 //**CD serve para acessar a parta a frente no terminal;
 
+//podemos substituir a paravra instal por a letra i;
+
 //iniciar o npm - //**npm init -y;
 
 //para instalar (pacotes, frameworks e etc)no npm - //**npm install express;
@@ -20,6 +22,14 @@
 //atulizar a dependias para a ultima versão - //**npm install express@4x
 
 //para desisntalar um pacote ou frameworks - //**npm uninstall express
+
+//como listar os pacotes instalados(completo) - //**npm ls
+
+//como listar apenas os que instalei(o numero no final é profundidade da pasta) - //**npm ls --depth=0
+
+//como listar os pacotes desatualizados que estão instalados nas dependências //**npm outdated
+
+//instalando webpack - //**npm i webpack --save-dev
 
 /*
 {
