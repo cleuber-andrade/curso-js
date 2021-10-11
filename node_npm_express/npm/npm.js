@@ -2,7 +2,7 @@
 
 //**CD serve para acessar a parta a frente no terminal;
 
-//podemos substituir a paravra instal por a letra i;
+//podemos substituir a paravra install por a letra i;
 
 //iniciar o npm - //**npm init -y;
 
