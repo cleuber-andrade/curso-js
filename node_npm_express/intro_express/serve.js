@@ -18,7 +18,12 @@ const app = express();
 //resquest - seria o que estamos pedindo ao servidor;
 //resposta - é que se manda para o servidor;
 app.get('/', (request, response) => {
-    response.send('Hello World!');
+    response.send(`
+    <form action="/" method ="POST">
+    Nome:<input type="text" name="nome">
+    <button>Enviar</button>
+    </form>
+    `);
 });
 
 app.get('/contato', (req, res) =>{
