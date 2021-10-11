@@ -1,15 +1,9 @@
+//path e fs já são medotos existente no node.js
 const fs = require('fs').promises;
-const path = require('path');
-const caminhoArquivo = path.resolve(__dirname, '..','text.json');
+                    
 
-const pessoas = [
-    {nome: 'joao'},
-    {nome: 'Binho'},
-    {nome: 'Nathy'},
-    {nome: 'Leila'},
-    {nome: 'Isac'}
-];
+module.exports = (caminhos, dados) => {
+    //fs.whiteFile é um médodo para escrever em um novo documento
+    fs.writeFile(caminhos, dados, { flag: 'w'});
+};
 
-const json = JSON.stringify(pessoas, '', 2);
-
-fs.writeFile(caminhoArquivo, json, { flag: 'w'});
