@@ -1,4 +1,6 @@
-//**CD serva para acessar a parta a frente no terminal;
+//**estou usando EXPRESS mas esses comandos serviriam para qualquer pacotes, frameworks e etc
+
+//**CD serve para acessar a parta a frente no terminal;
 
 //iniciar o npm - //**npm init -y;
 
