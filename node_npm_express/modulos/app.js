@@ -18,8 +18,21 @@
 //console.log(falaNome());
 
 
-const { Pessoa } = require('./modulo');
+//importando class
+//const { Pessoa } = require('./modulo');
+//const p1 = new Pessoa('Cleuber');
+//console.log(p1);
 
-const p1 = new Pessoa('Cleuber')
+//podemos tbm importa modulos já existentes no JS, no caso a sintax é extamento iguis porem não precisa direcionar o caminho.
+//const path = require(path);
 
-console.log(p1);
+
+//para instalar o axios no projeto
+//npm install ou (i) axios
+
+const axios = require('axios');
+axios('https://www.otaviomiranda.com.br/files/json/pessoas.json')
+    .then(response => console.log(response.data))
+    .catch(e => console.log(e));
+
+

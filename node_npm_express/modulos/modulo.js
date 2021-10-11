@@ -28,13 +28,23 @@
 //console.log(exports);
 
 
-//------------------------------------------------------------------
 
+
+//------------------------------------------------------------------
+//4ª maneira sobreescrevendo 
 class Pessoa {
     constructor(nome){
         this.nome = nome;
     }
 }
 
-exports.Pessoa = Pessoa;
- 
+const nome = 'Cleuber';
+const sobrenome = 'Andrade';
+
+//sobreescrevendo
+module.exports = {
+    nome, sobrenome, Pessoa
+}
+
+//exports.Pessoa = Pessoa;
+
