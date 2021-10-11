@@ -1,5 +1,5 @@
 //navegando das pastas - (./B/C/D/mod) = o ./ significa que é da minha pasta atual para frente.
-//../ é para voltar - (../../../api_rest) = ../ significa subir o nível da pasta, ou seja, subir para a pasta acima. 
+//../ é para voltar - (../../../api_rest) = ../ significa para atras do nível da pasta, ou seja, voltar para a pasta raiz. 
 
 
 //module.exports = (x, y) => x * y;
