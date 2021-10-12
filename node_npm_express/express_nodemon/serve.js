@@ -26,7 +26,11 @@ app.get('/', (request, response) => {
     `);
 });
 
-app.get('/contato', (req, res) =>{
+app.post('/', (req, res) => {
+    res.send('Obrigado por entrar em contato com a gente.');
+});
+
+app.get('/contato', (req, res) => {
     res.send('Obrigado por entrar em contato');
 });
 
