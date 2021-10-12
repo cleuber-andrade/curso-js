@@ -1,5 +1,12 @@
 //a depencia NODEMON serve para atualizar a aplicação de forma dinânmica no express.
 
+
+//devDependencies - é algo mais local, ou seja, é utilizado apenas na maquina e não junto com o projeto todo.
+//dependencies - é algo global que segue junto com projeto.
+//comando para assistir o nodemom -  npx nodemon serve.js
+//conferir se o start está package json. "nodemon server.js"
+
+
 const express = require('express');
 const app = express();
 
@@ -28,7 +35,3 @@ app.listen(3000, () => {
 
 
 
-//devDependencies - é algo mais local, ou seja, é utilizado apenas na maquina e não junto com o projeto todo.
-//dependencies - é algo global que segue junto com projeto.
-//comando para assistir o nodemom -  npx nodemon serve.js
-//conferir se o start está package json. "nodemon server.js"
