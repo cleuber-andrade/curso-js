@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const routes = require('./routes');
 const path = require('path');
+const { middlewareGlobal, outroMiddlewareGlobal } = require('./src/middlewares/middlewares');
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -15,6 +16,10 @@ app.set('views', path.resolve(__dirname, 'src', 'views'));
 //selecionando a engine a ser utilizada no projeto
 //para instalar no - npm i ejs
 app.set('view engine', 'ejs');
+
+//chamando o middleware 
+app.use(middlewareGlobal);
+app.use(outroMiddlewareGlobal);
 //chamando as routes.js
 app.use(routes);
 
