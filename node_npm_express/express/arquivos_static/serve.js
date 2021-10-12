@@ -6,6 +6,9 @@ const path = require('path');
 
 
 app.use(express.urlencoded({ extended: true }));
+//chamando o conteúdo statico(html, css, imagens e etc...)
+//app.use(express.static('./public'));
+app.use(express.static(path.resolve(__dirname, 'public')));
 //caminho relativo para a pasta views
 //app.set('views', './src/views');
 //caminho absoluto para a pasta views
