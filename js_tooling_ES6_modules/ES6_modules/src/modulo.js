@@ -15,4 +15,4 @@ export /*default*/ function soma(x, y){
 
 
 
-export { nome , sobrenome, idade, soma, teste as default };
+export { nome , sobrenome, idade, soma, teste as default, cpf };
