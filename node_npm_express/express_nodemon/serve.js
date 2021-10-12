@@ -1,26 +1,13 @@
-//**o express é um mini framework para criar crud
-//**clear - para limpar o teminal
+//a depencia NODEMON serve para atualizar a aplicação de forma dinânmica no express.
 
-
-//esse metodo já existe dentro do node_modules, por isso não precisa declarar o caminho
 const express = require('express');
 const app = express();
 
-//        CRIAR   LER   ATUALIZAR APAGAR     
-//CRUD -> CREATE, READ, UPDATE,   DELETE
-//        POST,   GET,  PUT,      DELETE
 
-// http://meusite.com/ <- GET -> entregue a pagina /;
-// http://meusite.com/sobre/ <- GET -> entregue a pagina /sobre;
-// http://meusite.com/contato <- GET -> entregue a pagina /contato;
-
-
-//resquest - seria o que estamos pedindo ao servidor;
-//resposta - é que se manda para o servidor;
 app.get('/', (request, response) => {
     response.send(`
     <form action="/" method ="POST">
-    Nome:<input type="text" name="nome">
+    Nome do cliente:<input type="text" name="nome">
     <button>Enviar</button>
     </form>
     `);
@@ -31,12 +18,17 @@ app.post('/', (req, res) => {
 });
 
 app.get('/contato', (req, res) => {
-    res.send('Obrigado por entrar em contato');
+    res.send('Olá mundo');
 });
 
-//escuta express, qualquer coisa que chegar nessa porta vc responde
-//localhost - seria a nossa própria maquina
 app.listen(3000, () => {
     console.log('Acessar http://localhost:3000');
     console.log('Esse servidor está executando na porta 3000');
 });
+
+
+
+//devDependencies - é algo mais local, ou seja, é utilizado apenas na maquina e não junto com o projeto todo.
+//dependencies - é algo global que segue junto com projeto.
+//comando para assistir o nodemom -  npx nodemon serve.js
+//conferir se o start está package json. "nodemon server.js"
