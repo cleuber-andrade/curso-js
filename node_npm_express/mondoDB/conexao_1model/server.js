@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const express = require('express');
 const app = express();
-//acessando bando de dados MOndoDB
+//acessando bando de dados MondoDB
 const mongoose = require('mongoose');
 mongoose.connect(process.env.CONNECTIONSTRING)
     .then(() => {        
