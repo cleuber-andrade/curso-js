@@ -16,7 +16,7 @@ const flash = require('connect-flash');
 
 const routes = require('./routes');
 const path = require('path');
-const { middlewareGlobal } = require('./src/middlewares/middleware');
+const { middlewareGlobal } = require('./src/middlewares/middlewares');
 
 app.use(express.urlencoded({ extended: true }));
 
