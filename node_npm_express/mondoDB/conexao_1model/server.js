@@ -1,9 +1,11 @@
+//impedindo que as informações com usuario, senha e etc apareça para o ususario
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 //acessando bando de dados MOndoDB
 const mongoose = require('mongoose');
-const connectionString = 'mongodb+srv://cleuber_andrade:Su7Vj5bPGtONBiyz@cluster0.b0tc7.mongodb.net/BASEDEDADOS?retryWrites=true&w=majority';
-mongoose.connect(connectionString)
+mongoose.connect(process.env.CONNECTIONSTRING)
     .then(() => { 
         console.log('Conectei a BD.');
         app.emit('pronto');
