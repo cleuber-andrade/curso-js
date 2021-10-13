@@ -13,7 +13,7 @@ mongoose.connect(process.env.CONNECTIONSTRING)
 
 //chamando a express-session    
 const session = require('express-session');
-const MongoStore = require('connect-mongo')(session);
+const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 
 
@@ -29,7 +29,7 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 
 const sessionOptions = session({
     secret: 'ajsdfhalsjdhfasdjhlasdjhflas',
-    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    store: new MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
     resave:false,
     saveUninitialized: false,
     cookie: {
