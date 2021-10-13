@@ -6,8 +6,7 @@ const app = express();
 //acessando bando de dados MOndoDB
 const mongoose = require('mongoose');
 mongoose.connect(process.env.CONNECTIONSTRING)
-    .then(() => { 
-        console.log('Conectei a BD.');
+    .then(() => {        
         app.emit('pronto');
     })
     .catch(e => console.log(e)); 
