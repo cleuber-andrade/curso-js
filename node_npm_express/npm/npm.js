@@ -2,6 +2,8 @@
 
 //**CD serve para acessar a parta a frente no terminal;
 
+//Para proteger senhas e login - //**npm dotenv
+
 //podemos substituir a paravra install por a letra i;
 
 //iniciar o npm - //**npm init -y;
