@@ -1,21 +1,20 @@
 const express = require('express');
 const app = express();
+//acessando bando de dados MOndoDB
+const mongoose = require('mongoose');
+const connectionString = 'mongodb+srv://cleuber_andrade:Su7Vj5bPGtONBiyz@cluster0.b0tc7.mongodb.net/BASEDEDADOS?retryWrites=true&w=majority';
+mongoose.connect(connectionString);
+
 const routes = require('./routes');
 const path = require('path');
-
+const { middlewareGlobal, outroMiddlewareGlobal } = require('./src/middlewares/middlewares');
 
 app.use(express.urlencoded({ extended: true }));
-//chamando o conteúdo statico(html, css, imagens e etc...)
-//app.use(express.static('./public'));
 app.use(express.static(path.resolve(__dirname, 'public')));
-//caminho relativo para a pasta views
-//app.set('views', './src/views');
-//caminho absoluto para a pasta views
 app.set('views', path.resolve(__dirname, 'src', 'views'));
-//selecionando a engine a ser utilizada no projeto
-//para instalar no - npm i ejs
 app.set('view engine', 'ejs');
-//chamando as routes.js
+
+app.use(middlewareGlobal);
 app.use(routes);
 
 app.listen(3000, () => {
