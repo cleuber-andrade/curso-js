@@ -33,6 +33,7 @@
 
 //instalando webpack - //**npm i webpack --save-dev
 
+//instalando o Mongoose (para validar os dados e conexão com a base de dados)- //**npm i mongoose
 /*
 {
     "name": "npm", (nome da pasta raiz)
