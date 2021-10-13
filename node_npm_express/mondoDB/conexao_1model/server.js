@@ -3,7 +3,12 @@ const app = express();
 //acessando bando de dados MOndoDB
 const mongoose = require('mongoose');
 const connectionString = 'mongodb+srv://cleuber_andrade:Su7Vj5bPGtONBiyz@cluster0.b0tc7.mongodb.net/BASEDEDADOS?retryWrites=true&w=majority';
-mongoose.connect(connectionString);
+mongoose.connect(connectionString, { userNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => { 
+        console.log('Conectei a BD.');
+        app.emit('pronto');
+    }); 
+    
 
 const routes = require('./routes');
 const path = require('path');
@@ -18,7 +23,10 @@ app.use(middlewareGlobal);
 app.use(outroMiddlewareGlobal);
 app.use(routes);
 
-app.listen(3000, () => {
-    console.log('Acessar http://localhost:3000');
-    console.log('Esse servidor está executando na porta 3000');
+
+app.on('pronto', () => {
+    app.listen(3000, () => {
+        console.log('Acessar http://localhost:3000');
+        console.log('Esse servidor está executando na porta 3000');
+    });
 });
