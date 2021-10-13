@@ -1,13 +1,8 @@
-//const HomeModel = require('../models/HomeModel');
-
-//HomeModel.create({
-//  titulo: 'Outra coisa qualquer',
-//  descricao: 'Outra descrição'
-//})
-//  .then(dados => console.log(dados))
-// .catch(e => console.log(e));
-
 exports.paginaInicial = (req, res) => {
+    req.session.usuario = { nome: 'Cleuber', logado: true };
+    req.flash('info', 'Olá mundo!');
+    req.flash('error', 'Olá mundo!');
+    req.flash('success', 'Olá mundo!');
     res.render('index');
   };
   
