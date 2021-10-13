@@ -15,6 +15,7 @@ app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 
 app.use(middlewareGlobal);
+app.use(outroMiddlewareGlobal);
 app.use(routes);
 
 app.listen(3000, () => {
