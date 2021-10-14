@@ -1,2 +1,4 @@
+serve para ignorar arquivos ou pastas que seram publicado no repositórios.
+
 node_modules
 .env
