@@ -1,3 +1,5 @@
+//basicamente o trabalho do controller é descidir qual é o MODEL e VIEWS que será utilizado na rota.
+
 exports.paginaInicial = (req, res) => {  
   res.render('index', {
     titulo: 'Este é o título da página',
