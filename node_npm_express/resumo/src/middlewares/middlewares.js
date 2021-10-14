@@ -1,3 +1,5 @@
+//meddleware - são funções executadas na route, ou seja, vc quer responder o cliente no meio do do caminho, antes da resposta final da route.
+
 exports.middlewareGlobal = (req, res, next) => {
   res.locals.umaVariavelLocal = 'Este é o valor da varival local';
   next();
