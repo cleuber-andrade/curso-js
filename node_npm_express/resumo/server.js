@@ -81,3 +81,5 @@ app.on('pronto', () => {
     console.log('Servidor executando na porta 3000');
   });
 });
+
+//O PADRÃO DESSE PROJETO É O MVC - MODEL, VIEWS, CONTROLLERS
