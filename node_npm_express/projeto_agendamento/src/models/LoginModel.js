@@ -11,12 +11,20 @@ const LoginModel = mongoose.model('Login', LoginSchema);
 class Login {
   constructor(body){
     this.body = body; 
-    this.err = [];
+    this.errors = [];
     this.user = null;   
   }
 
-  register(){
+  async register(){
     this.valida();
+    if(this.errors.length > 0 ) return;
+
+    try{
+      this.user = await LoginModel.create(this.body);
+    }catch(e) {
+      console.log(e);
+    }
+    
   }
 
   valida(){
@@ -25,10 +33,10 @@ class Login {
 
     //validação
     //O email precisa ser valido.
-    if(!validator.isEmail(this.body.email)) this.err.push('E-mail Inválido');
+    if(!validator.isEmail(this.body.email)) this.errors.push('E-mail Inválido');
     //A senha precisa ter entre 3 e 50;
     if(this.body.password.length < 3 || this.body.password.length >= 50){
-      
+      this.errors.push('A senha precisa ter entre 3 e 50 caracteres.');
     }
   }
 
