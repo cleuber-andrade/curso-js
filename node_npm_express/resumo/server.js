@@ -65,15 +65,16 @@ app.set('views', path.resolve(__dirname, 'src', 'views'));
 //essa é engene que estamos utilizando para redenrizar os html.
 app.set('view engine', 'ejs');
 
-
+//chamando o csrf
 app.use(csrf());
 // Nossos próprios middlewares
-
 app.use(middlewareGlobal);
 app.use(checkCsrfError);
 app.use(csrfMiddleware);
+//chamando as rotas
 app.use(routes);
 
+//mandado a nossa aplicação escutar
 app.on('pronto', () => {
   app.listen(3000, () => {
     console.log('Acessar http://localhost:3000');
