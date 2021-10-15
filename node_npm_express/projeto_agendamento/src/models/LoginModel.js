@@ -37,7 +37,7 @@ class Login {
   async userExists() {
     const user = await LoginModel.findOne({email: this.body.email});
     
-    if(user) this.errors.push('Usário já existe.');
+    if(user) this.errors.push('Usuário já existe.');
   }
 
   valida(){
