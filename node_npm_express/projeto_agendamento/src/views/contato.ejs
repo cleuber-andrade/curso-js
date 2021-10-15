@@ -6,27 +6,34 @@
         <div class="col-lg-2"></div>
 
         <div class="col-lg-8 my-3">
-          <h1 class="text-center">Agenda</h1>
-          <p class="text-center lead">Seus contatos estão abaixo</p>
+          <h1 class="text-center">Lista de Contatos</h1>
+          <p class="text-center lead">Crie ou edite os formulários abaixo</p>
 
-          <%- include('includes/messages')%>
+          <%- include('includes/messages')%>          
 
-          <div class="row">
-            <div class="col">
-              <div class="alert alert-danger">Um erro qualquer</div>
-            </div>
-          </div>
+          <form action="/contato/register" method="POST">
+            <input type="hidden" name="_csrf" value= <%= csrfToken%>>
+            <div class="mb-3 mt-3">
+              <label class="form-label">Nome</label>
+              <input value="<%= contato.nome%>" type="text" class="form-control" name="nome">
+            </div> 
+            <div class="mb-3 mt-3">
+              <label class="form-label">Sobrenome</label>
+              <input value="<%= contato.sobrenome%>" type="text" class="form-control" name="sobrenome">
+            </div> 
+            <div class="mb-3 mt-3">
+              <label class="form-label">Email</label>
+              <input value="<%= contato.email%>" type="email" class="form-control" name="email">
+            </div> 
+            <div class="mb-3 mt-3">
+              <label class="form-label">Telefone</label>
+              <input value="<%= contato.telefone%>" type="tel" class="form-control" name="telefone">
+            </div>          
 
-          <div class="resposive-table">
-            <table class="table lead my-3">
-              <tr>
-                <td>Nathy</td>
-                <td>Andrade</td>
-                <td>(21) 9595-9595</td>
-                <td>nathycon@hotmail.com</td>
-              </tr>              
-            </table>
-          </div>
+            <button type="submit" class="btn btn-dark">Salvar</button>
+
+          </form>
+
         </div>        
 
         <div class="col-lg-2"></div>
