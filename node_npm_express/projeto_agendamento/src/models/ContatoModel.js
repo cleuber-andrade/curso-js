@@ -48,11 +48,20 @@ Contato.prototype.cleanUp = function(){
   };
 };
 
-//metodos estáticos
+//metodos estáticos - eles não tem acesso ao this
 Contato.buscaPorId = async (id) =>{
   if(typeof id !== 'string') return;
-  const user = await ContatoModel.findById(id);
-  return user;
+  const contato = await ContatoModel.findById(id);
+  return contato;
 }
+
+Contato.buscaContatos = async () =>{
+  if(typeof id !== 'string') return;
+  const contatos = await ContatoModel.find();
+  .sort({criadoEm: -1});
+  return contatos;
+}
+
+
 
 module.exports = Contato;
